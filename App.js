@@ -3,7 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Restaurants from './Components/Restaurants';
 
-const key = "AIzaSyBZI9op6ZeKLFBJl-PJdQoaCbze8JU8V9E"
+const key = process.env.API_KEY
+
+console.log(key)
+
 const googleString = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=pals&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=${key}`
 
 export default function App() {
